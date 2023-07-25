@@ -1,0 +1,152 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* FUENTE GENERAL */
+html{
+    font-family: 'Manrope', sans-serif;
+}
+/* HEADER / MENU */
+ 
+.color-menu{
+    background-color: black;
+}
+a{
+    text-decoration: none;
+}
+
+.color-link , .m{
+    color: whitesmoke;
+    font-size: 1rem;
+}
+.color-link:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+.color-link:active{
+    background-color: whitesmoke;
+    color: black;
+}
+
+
+
+/* FOOTER */
+footer{
+    margin-top: 3rem;
+    background-color: black;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+footer a{
+    color: whitesmoke;
+    
+}
+
+@media screen and (min-width: 1024px){
+
+    /* DESOCULTAR */
+    main .promociones-home{
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: gray;
+        grid-area: Promocion ;
+        text-align: center;
+        align-self: center;
+        
+    }
+    .div-span-home-textodeskop{
+        display: inline;
+    }
+    .div-home-imagenprincipal{
+        display: none;
+   }
+ .div-home-imagendeskop{
+    display: block;
+}
+    /* HOME DESKOP  */
+   main{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-rows: 4rem 0.2fr 0.5fr 0.2fr 0.3fr;
+    grid-template-areas: "Promocion Promocion"
+                         "Titulo-home Titulo-home"
+                         "Imagen-home Texto-home"
+                         "Titulo-home-productos Titulo-home-productos"
+                         "Producto Producto";
+   justify-items: center;
+   align-items: center;
+    }
+   /* GRID AREA */
+   .Titulo{
+    grid-area: Titulo-home;
+   }
+   .div-home-imagenprincipal{
+        display: none;
+   }
+   .div-home-textoprincipal{
+        grid-area: Texto-home;
+   }
+.div-home-imagendeskop{
+    grid-area: Imagen-home;
+}
+   .Titulo-home-productos{
+    grid-area: Titulo-home-productos;
+   }
+   .productos {
+    grid-area: Producto;
+    display: flex;
+    justify-content: space-between !important;
+   }
+   .productos section{
+    width: 35%;
+   }
+   
+}
+
+/* REGISTER */
+main .registro{
+    text-align: center;
+    height: 46rem;
+    padding: 1rem;
+    border: solid black 2px;
+}
+.section-register-imagen{
+    width: 78%;
+
+}
+.a-register-iniciars{
+     background-color: black;
+     color: whitesmoke;
+     padding: 0.2rem 0.3rem;
+     border-radius: 10%;
+}
+/* REGISTER DESKOP */
+@media screen and (min-width: 1024px){
+    main{
+        height: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main .registro{
+        height: 100%;
+        width: 80%;
+    }
+    .section-register-imagen{
+        width: 30%;
+        margin-top: 3rem;
+    }
+    .section-register p{
+        display: none;
+    }
+}
+
+
